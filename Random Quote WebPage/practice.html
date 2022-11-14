@@ -10,26 +10,70 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-                
+                <!-- <button type="button" onclick="history.back();">Go Back</button> -->
+                <p>This is a paragraph.</p>
         <script>
             // // for (let i = 0; i <= 10; i++) {
             // //     document.write("Yes, it's yet another alert!");
             // //     document.write("<br>");  
             // }
-            const userInput = window.prompt('Hello World');
-            document.write(userInput);
+            // const userInput = window.prompt('Hello World');
+            // document.write(userInput);
             
-            document.write(document.URL); // returns current URL
-            document.write('<br>'); 
-            document.write(document.title); // title in the head of html
-            document.write('<br>');
-            document.write(document.referrer); // returns previous URL
-            document.write('<br>');
-            document.write(document.lastModified); // returns last modified date
-            document.write('<br>');
-            document.write(document.cookie); // enables you to read or set a cookie used within a dcoument
-            document.write('<br>');
-            document.write(document.images); //returns collection of images used in document
+            // document.write(document.URL); // returns current URL
+            // document.write('<br>'); 
+            // document.write(document.title); // title in the head of html
+            // document.write('<br>');
+            // document.write(document.referrer); // returns previous URL
+            // document.write('<br>');
+            // document.write(document.lastModified); // returns last modified date
+            // document.write('<br>');
+            // document.write(document.cookie); // enables you to read or set a cookie used within a dcoument
+            // document.write('<br>');
+            // document.write(document.images); //returns collection of images used in document
+
+            let stringVar = "30 angry polar bears";
+            let numVar = parseInt(stringVar);
+            document.write(numVar);   
+            
+            // two ways to create string a new string object
+            let stringTest = "This is a string";
+            stringTest = new String("This is a test string");
+
+            let myStr = "All This Is In Lowercase";
+            document.write(myStr);
+            myStr = myStr.toUpperCase();
+            document.write("<br>");
+            document.write(myStr);
+            myStr = myStr.toLowerCase();
+            document.write("<br>");
+            document.write(myStr);
+            // methods use parenthesis and properties don't use parenthesis
+
+            //using part of a string
+            let subString = myStr.substring(1,5);
+            //second index is non-inclusive
+            document.write("<br>");
+            document.write(subString);
+            document.write("<br>");
+
+
+            //getting a single character
+            let characterAt = myStr.charAt(1);
+            document.write(characterAt);
+            document.write("<br>");
+
+            //finding a substring 
+            let findStr = myStr.indexOf("is");
+            document.write(findStr);
+            document.write("<br>");
+
+            //finding the last occurence of the string
+            let lastOccurStr = myStr.lastIndexOf("is");
+            document.write(lastOccurStr);
+
+
+
         </script>
     </body>
 </html>
