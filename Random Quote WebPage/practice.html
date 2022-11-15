@@ -72,6 +72,16 @@
             let lastOccurStr = myStr.lastIndexOf("is");
             document.write(lastOccurStr);
 
+            let text = "enfsnfksndfsndlkfns";
+            function splitText(){
+            const myArray = text.split("");
+            text="";
+            for( let i=0; i< myArray.length; i++){
+            text+= myArray[i] + "<br>";
+            }
+            return text;};
+
+            document.getElementById("demo").innerHTML = splitText();
 
 
         </script>
