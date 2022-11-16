@@ -263,14 +263,14 @@
 // let finalResult = multiplyTwoNums(num1, num2);
 // document.write(num1, " times ", num2, " = ", finalResult);
 
-// function multiplyAndDivide(num1, num2, num3) {
-//   let result = (num1 * num2) / num3;
-//   return result;
-// }
-// num1 = window.prompt("Enter 1st number");
-// num2 = window.prompt("Enter 2nd number");
-// num3 = window.prompt("Enter 3rd number");
-// let finalResult = multiplyAndDivide(num1, num2, num3);
-// document.write(
-//   " ( " + num1 + " * " + num2 + " ) " + " / " + num3 + " = " + finalResult
-// );
+function multiplyAndDivide(num1, num2, num3) {
+  let result = (num1 * num2) / num3;
+  return result;
+}
+num1 = window.prompt("Enter 1st number");
+num2 = window.prompt("Enter 2nd number");
+num3 = window.prompt("Enter 3rd number");
+let finalResult = multiplyAndDivide(num1, num2, num3);
+document.write(
+  " ( " + num1 + " * " + num2 + " ) " + " / " + num3 + " = " + finalResult
+);
