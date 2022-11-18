@@ -274,3 +274,4 @@ let finalResult = multiplyAndDivide(num1, num2, num3);
 document.write(
   " ( " + num1 + " * " + num2 + " ) " + " / " + num3 + " = " + finalResult
 );
+
