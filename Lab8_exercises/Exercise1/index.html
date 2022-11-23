@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <button type="button" title="button 1" id="btn1" onclick="firstBtn();">Button 1</button>
+        <button type="button" title="button 1" id="btn2" onclick="secondBtn();">Button 2</button>
+    </form>
+    <p id="output1">Button 1</p>
+    <p id="output2">Button 2</p>
+</body>
+<script>
+    const firstButton = document.getElementById("btn1");
+    const secondButton = document.getElementById("btn2");
+    const para1 = document.getElementById("output1");
+    const para2 = document.getElementById("output2");
+
+    function firstBtn() {
+        para1.textContent = "Button 1 is clicked";
+    }
+
+    function secondBtn(){
+        para2.textContent = "Button 2 is clicked";
+    }
+</script>
+</html>
