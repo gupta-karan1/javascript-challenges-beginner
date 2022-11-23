@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body id="body" onclick="whiteBgColor();">
-    <p id="para" onclick="bgColor();">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae dignissimos totam illum quam fuga quod quos. Numquam voluptas accusamus quod excepturi ut obcaecati, illum veritatis commodi est itaque blanditiis omnis.
+<body>
+    <p id="para" onclick="backColor();">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae dignissimos totam illum quam fuga quod quos. Numquam voluptas accusamus quod excepturi ut obcaecati, illum veritatis commodi est itaque blanditiis omnis.
     Ex a nisi aliquid officiis est perferendis, fuga iste, in dolorum vitae exercitationem praesentium veritatis at deleniti distinctio consequuntur tempora ipsa, ducimus voluptatibus! Quo, quia? Minima rem cupiditate laborum illo?</p>
     <script>
-        // const paraText = document.getElementById("para");
-        function bgColor() {
-            document.body.style.backgroundColor = "blue";
+        let colorChange = true;
+        function backColor() {
+            if (colorChange == true) {
+                document.body.style.backgroundColor = "blue";
+                colorChange = false;
+            } else if(colorChange == false) {
+                document.body.style.backgroundColor = "white";
+                colorChange = true;
+            }
         }
-        // function whiteBgColor(){
-        //     document.body.style.backgroundColor = "default";
-        // }
     </script>
 </body>
 </html>
