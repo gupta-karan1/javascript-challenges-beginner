@@ -77,12 +77,57 @@ const menu = [
 // 1. target the parent of all items
 const sectionCenter = document.querySelector(".section-center");
 
+const filterBtns = document.querySelectorAll(".filter-btn");
+
 // 2. look for the event where the dom content is loaded within the window
+
+// load items
 window.addEventListener("DOMContentLoaded", function () {
-  // console.log("shake and bake");
-  let displayMenu = menu.map(function (item) {
-    console.log(item);
-    return item;
-  });
-  console.log(displayMenu);
+  displayMenuItems(menu);
 });
+
+//filter items
+filterBtns.forEach(function (btn) {
+  btn.addEventListener("click", function (e) {
+    const category = e.currentTarget.dataset.id;
+    const menuCategory = menu.filter(function (menuItem) {
+      if (menuItem.category === category) {
+        return menuItem;
+      }
+    });
+    if (category === "all") {
+      displayMenuItems(menu);
+    } else {
+      displayMenuItems(menuCategory);
+    }
+  });
+});
+
+// we looped over our array
+// we return a new setup
+// we added a new string with html syntax
+// we dynamically populated the array
+// we joined all of them together
+// we place all of it in the section center
+
+function displayMenuItems(menuItems) {
+  let displayMenu = menuItems.map(function (item) {
+    // console.log(item);
+    return `        <article class="menu-item">
+      <img src=${item.img} class="photo" alt="${item.title}">
+      <div class="item-info">
+        <header>
+        <h4>${item.title}</h4>
+        <h4 class="price">${item.price}</h4>
+      </header>
+      <p class="item-text">${item.desc}</p>
+      </div>
+    </article>`;
+  });
+  displayMenu = displayMenu.join(""); // add the quote marks to remove commas from the output string
+  sectionCenter.innerHTML = displayMenu;
+}
+
+// get only unique categories
+// iterate over categories return buttons
+// make sure to select the buttons when they are available
