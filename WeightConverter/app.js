@@ -13,7 +13,7 @@ let degCRef = document.getElementById("degC");
 let degFRef = document.getElementById("degF");
 
 // 2. create function to convert from one unit to other values
-// using ternary operator
+
 let convertFromGrams = () => {
   let gms = gmsRef.value;
   // using toFixed method to limit decimals to 2 digits only
