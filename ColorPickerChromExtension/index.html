@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Color Picker Chrome Extension</title>
+    <script src="/ColorPickerChromExtension/script.js" defer></script>
+    <!-- The defer attribute is a boolean attribute that can be added to script elements in HTML. It tells the browser to wait until the page has finished parsing before executing the script. This can be useful if the script is not critical to the initial rendering of the page, as it can allow the browser to finish rendering the page before running the script.  -->
+  </head>
+  <body>
+    <div class="popup">
+      <div class="picker">
+        <button type="button" id="color-picker">Pick Color</button>
+      </div>
+
+      <div class="picked-colors hide">
+        <header>
+          <p class="title">Picked colors</p>
+          <span class="clear-all">Clear All</span>
+        </header>
+
+        <ul class="all-colors"></ul>
+      </div>
+    </div>
+  </body>
+</html>
