@@ -51,6 +51,16 @@ body {
   font-size: 0px;
   cursor: pointer;
   overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+carousel.dragging img {
+  pointer-events: none;
 }
 
 .carousel img {
@@ -62,6 +72,7 @@ body {
 
 .carousel img:first-child {
   margin-left: 0;
+  display: none;
 }
 
 /* make it responsive */
