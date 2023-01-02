@@ -21,7 +21,7 @@ const handleIcons = () => {
   // scrollWidth - clientWidth gives the maximum scrollable width
   let maxScrollableWidth = tabsBox.scrollWidth - tabsBox.clientWidth;
 
-  //   console.log(scrollVal, maxScrollableWidth);
+  // console.log(scrollVal, maxScrollableWidth);
 
   arrowIcons[0].parentElement.style.display = scrollVal > 0 ? "flex" : "none";
 
